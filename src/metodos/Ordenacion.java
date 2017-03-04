@@ -261,7 +261,7 @@ public class Ordenacion {
         if (n == 1) {
             for (int incremento = v.length / 2; incremento > 0; incremento = (incremento == 2) ? 1 : (int) Math.round(incremento / 2.2)) {
                 for (int i = incremento; i < v.length; i++) {
-                    for (int j = i; j >= incremento && v[j - incremento] > v[j]; j = incremento) {
+                    for (int j = i; j >= incremento && v[j - incremento] > v[j]; j -= incremento) {
                         aux = v[j];
                         v[j] = v[j - incremento];
                         v[j - incremento] = aux;
